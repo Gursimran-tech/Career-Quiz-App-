@@ -26,3 +26,5 @@ Open in VSCODE
 Create database according to your use in MYSQL
 Then run in terminal by applying = python app.py
 now your file is run on local server.
+
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/9e62aeca-50a5-4ef0-8e62-78eee29d5d85" />
