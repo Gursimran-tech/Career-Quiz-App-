@@ -19,3 +19,10 @@ Career Companion is a personalized career recommendation web application that gu
 - *Backend*: Python (Flask)
 - *Database*: MySQL
 
+## SETUP GUIDE
+Download VSCODE AND MYSQL for DataBase
+Extract ZIP file
+Open in VSCODE
+Create database according to your use in MYSQL
+Then run in terminal by applying = python app.py
+now your file is run on local server.
