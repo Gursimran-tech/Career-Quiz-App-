@@ -1,3 +1,5 @@
+<img width="1600" height="500" alt="image" src="https://github.com/user-attachments/assets/c6ad7946-d717-4414-91be-80640d4a20f6" />
+
 # Career Companion 🎯
 
 Career Companion is a personalized career recommendation web application that guides users toward suitable career paths based on their interests, preferences, and responses to a dynamic quiz. Designed with smooth transitions and accessibility in mind, the app offers a friendly and intuitive user experience for all users.
