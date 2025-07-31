@@ -1,17 +1,17 @@
 from flask import Flask, render_template, request, redirect,session
-# import mysql.connector
+import mysql.connector
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
 # MySQL connection
-# db = mysql.connector.connect(
-#     host="localhost",
-#     user="root",
-#     password="Guri@12345",
-#     database="career_db"
-# )
-# cursor = db.cursor(buffered=True)
+db = mysql.connector.connect(
+    host="localhost",
+    user="root",
+    password="Guri@12345",
+    database="career_db"
+)
+cursor = db.cursor(buffered=True)
 
 # Home route redirects to login
 @app.route('/')
@@ -25,9 +25,9 @@ def signup():
         name = request.form['name']
         email = request.form['email']
         password = request.form['password']
-        # cursor.execute("INSERT INTO users (username, email, password) VALUES (%s, %s, %s)",
-        #                (name, email, password))
-        # db.commit()
+        cursor.execute("INSERT INTO users (username, email, password) VALUES (%s, %s, %s)",
+                       (name, email, password))
+        db.commit()
         return redirect('/login')
     return render_template('signup.html')
 
@@ -37,8 +37,8 @@ def login():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
-        # cursor.execute("SELECT id, username FROM users WHERE email = %s AND password = %s", (email, password))
-        # user = cursor.fetchone()
+        cursor.execute("SELECT id, username FROM users WHERE email = %s AND password = %s", (email, password))
+        user = cursor.fetchone()
         if user:
             session['user_id'] = user[0]
             session['user_name'] = user[1]
