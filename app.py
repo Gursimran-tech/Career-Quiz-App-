@@ -5,13 +5,13 @@ app = Flask(__name__)
 app.secret_key = 'your_secret_key'
 
 # MySQL connection
-db = mysql.connector.connect(
-    host="localhost",
-    user="root",
-    password="Guri@12345",
-    database="career_db"
-)
-cursor = db.cursor(buffered=True)
+# db = mysql.connector.connect(
+#     host="localhost",
+#     user="root",
+#     password="Guri@12345",
+#     database="career_db"
+# )
+# cursor = db.cursor(buffered=True)
 
 # Home route redirects to login
 @app.route('/')
