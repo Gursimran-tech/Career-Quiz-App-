@@ -37,8 +37,8 @@ def login():
     if request.method == 'POST':
         email = request.form['email']
         password = request.form['password']
-        cursor.execute("SELECT id, username FROM users WHERE email = %s AND password = %s", (email, password))
-        user = cursor.fetchone()
+        # cursor.execute("SELECT id, username FROM users WHERE email = %s AND password = %s", (email, password))
+        # user = cursor.fetchone()
         if user:
             session['user_id'] = user[0]
             session['user_name'] = user[1]
