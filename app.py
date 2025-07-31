@@ -25,9 +25,9 @@ def signup():
         name = request.form['name']
         email = request.form['email']
         password = request.form['password']
-        cursor.execute("INSERT INTO users (username, email, password) VALUES (%s, %s, %s)",
-                       (name, email, password))
-        db.commit()
+        # cursor.execute("INSERT INTO users (username, email, password) VALUES (%s, %s, %s)",
+        #                (name, email, password))
+        # db.commit()
         return redirect('/login')
     return render_template('signup.html')
 
